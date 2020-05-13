@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Camden Care</string>
+    <string name="enter">Enter</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="enter_mrn">Enter MRN</string>
+    <string name="login">Login</string>
+</resources>
