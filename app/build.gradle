@@ -23,6 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    
 }
 
 dependencies {
@@ -46,6 +47,8 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:2.6.2"
     implementation("com.squareup.okhttp3:logging-interceptor:4.5.0")
     implementation "com.facebook.stetho:stetho-okhttp3:1.5.1"
+    //logging
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 
 
 }
