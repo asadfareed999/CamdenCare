@@ -1,200 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <View
         android:id="@+id/view_top"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/colorDarkBlue"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/tv_camden_care"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="@dimen/dimen_home_text"
-        android:textStyle="bold"
-        android:textColor="@color/colorWhite"
-        android:layout_marginTop="@dimen/dimen_home_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutHeader"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/str_name"
-        android:textSize="@dimen/dimen_home_text"
-        android:textStyle="bold"
-        android:textColor="@color/colorWhite"
-        android:layout_marginTop="@dimen/dimen_home_name_top"
-        android:maxLength="15"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_camden_care"
-        android:layout_marginStart="@dimen/dimen_home_name_start"/>
-
-    <TextView
-        android:id="@+id/tv_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/str__23_yrs"
-        android:textSize="@dimen/dimen_home_text"
-        android:textColor="@color/colorWhite"
-        android:maxLength="10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_name"
-        android:layout_marginStart="@dimen/dimen_home_name_start"/>
-
-    <TextView
-        android:id="@+id/tv_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/str_id_3456_3432_1234"
-        android:textSize="@dimen/dimen_home_text"
-        android:textColor="@color/colorWhite"
-        android:maxLength="20"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_age"
-        android:layout_marginStart="@dimen/dimen_home_name_start"/>
-
-
-    <com.mikhaellopez.circularimageview.CircularImageView
-        android:id="@+id/iv_profile"
-        android:layout_width="@dimen/dimen_home_image"
-        android:layout_height="@dimen/dimen_home_image"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/dimen_home_image_margin"
-        android:src="@drawable/ic_user_profile"
-        app:civ_border_color="@color/colorAccent"
-        app:civ_border_width="4dp"
-        app:civ_shadow="false"
-        app:layout_constraintStart_toEndOf="@id/tv_id"
+        android:paddingTop="@dimen/dimen_home_top"
+        android:paddingBottom="@dimen/dimen_home_top"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_camden_care"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimen_home_text"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_home_name_start"
+            android:layout_marginTop="@dimen/dimen_home_name_top"
+            android:maxLength="15"
+            android:text="@string/str_name"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimen_home_text"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_camden_care" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_home_name_start"
+            android:maxLength="10"
+            android:text="@string/str__23_yrs"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimen_home_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_home_name_start"
+            android:maxLength="20"
+            android:text="@string/str_id_3456_3432_1234"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimen_home_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_age" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="@dimen/dimen_home_image"
+            android:layout_height="@dimen/dimen_home_image"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dimen_home_name_start"
+            android:src="@drawable/ic_user_profile"
+            app:civ_border_color="@color/colorCivBorder"
+            app:civ_border_width="4dp"
+            app:civ_shadow="false"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_id"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/view_top"
-        app:layout_constraintBottom_toTopOf="@id/view_bottom">
+        app:layout_constraintBottom_toTopOf="@id/view_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top">
 
-    <androidx.cardview.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimen_home_card_margin"
-        android:background="@color/colorCardview"
-        card_view:cardElevation="@dimen/dimen_home_cardview_elevation">
-
-        <LinearLayout
+        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_margin="@dimen/dimen_home_card_margin"
+            android:background="@color/colorCardview"
+            card_view:cardElevation="@dimen/dimen_home_cardview_elevation">
 
-            <TableLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/table_layout"
-                android:orientation="vertical"
-                android:background="@color/colorCardview"
-                android:paddingEnd="@dimen/dimen_home_table_padding"
-                android:paddingStart="@dimen/dimen_home_table_padding">
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tv_summary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/str_summary"
-                    android:textSize="@dimen/dimen_home_text"
-                    android:textStyle="bold"
-                    android:textColor="@color/colorDarkBlue" />
-                <TableRow
+                <TableLayout
+                    android:id="@+id/table_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/display_row"
-                    android:weightSum="1">
+                    android:background="@color/colorCardview"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/dimen_home_table_padding"
+                    android:paddingEnd="@dimen/dimen_home_table_padding">
+
                     <TextView
-                        android:layout_width="0dp"
+                        android:id="@+id/tv_summary"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/dimen_home_row_text_padding"
-                        android:text="@string/str_date"
-                        android:layout_weight="0.3"
-                        android:textColor="#000"
-                        android:textSize="@dimen/dimen_home_row_text" />
-                    <TextView
-                        android:layout_width="0dp"
+                        android:text="@string/str_summary"
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="@dimen/dimen_home_text"
+                        android:textStyle="bold" />
+
+                    <TableRow
+                        android:id="@+id/display_row"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:padding="@dimen/dimen_home_row_text_padding"
-                        android:layout_weight="0.4"
-                        android:text="@string/str_test"
-                        android:textColor="#000"
-                        android:textSize="@dimen/dimen_home_row_text" />
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.3"
-                        android:padding="@dimen/dimen_home_row_text_padding"
-                        android:text="@string/str_status"
-                        android:textColor="#000"
-                        android:textSize="@dimen/dimen_home_row_text" />
-                </TableRow>
-            </TableLayout>
+                        android:weightSum="1">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/fragmentHomeRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:itemCount="19"
-            android:background="@color/colorCardview"
-            tools:listitem="@layout/item_list_test"
-            android:paddingStart="@dimen/dimen_home_table_padding"
-            android:paddingEnd="@dimen/dimen_home_table_padding">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:padding="@dimen/dimen_home_row_text_padding"
+                            android:text="@string/str_date"
+                            android:textColor="#000"
+                            android:textSize="@dimen/dimen_home_row_text" />
 
-        </androidx.recyclerview.widget.RecyclerView>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:padding="@dimen/dimen_home_row_text_padding"
+                            android:text="@string/str_test"
+                            android:textColor="#000"
+                            android:textSize="@dimen/dimen_home_row_text" />
 
-        </LinearLayout>
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:padding="@dimen/dimen_home_row_text_padding"
+                            android:text="@string/str_status"
+                            android:textColor="#000"
+                            android:textSize="@dimen/dimen_home_row_text" />
+                    </TableRow>
+                </TableLayout>
 
-    </androidx.cardview.widget.CardView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/fragmentHomeRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorCardview"
+                    android:paddingStart="@dimen/dimen_home_table_padding"
+                    android:paddingEnd="@dimen/dimen_home_table_padding"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="19"
+                    tools:listitem="@layout/item_list_test">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
     <View
         android:id="@+id/view_bottom"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/dimen_home_footer_height"
+        android:background="@color/colorDarkBlue"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_logout"
-        android:background="@color/colorDarkBlue"/>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <TextView
         android:id="@+id/tv_logout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:text="@string/str_logout"
-        android:textSize="@dimen/dimen_home_row_text"
         android:textColor="@color/colorWhite"
-        android:maxLength="20"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintVertical_bias="0.96"/>
+        android:gravity="center"
+        android:textSize="@dimen/dimen_home_row_text"
+        app:layout_constraintBottom_toBottomOf="@id/view_bottom"
+        app:layout_constraintEnd_toEndOf="@id/view_bottom"
+        app:layout_constraintTop_toTopOf="@id/view_bottom"
+        android:layout_marginEnd="@dimen/dimen_home_name_start"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

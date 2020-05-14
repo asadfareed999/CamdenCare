@@ -10,5 +10,6 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorSkyBlue">#57BEFF</color>
     <color name="colorCardview">#CCD8E6</color>
+    <color name="colorCivBorder">#FFB2B2B2</color>
 
 </resources>
