@@ -15,6 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:scaleType="centerCrop"
+        android:contentDescription="@string/camden_care_logo"
         app:srcCompat="@drawable/signup_signin" />
 
         <LinearLayout
@@ -35,6 +36,7 @@
             android:layout_height="@dimen/_70sdp"
             android:layout_gravity="center"
             android:padding="@dimen/_7sdp"
+            android:contentDescription="@string/camden_care_logo"
             app:srcCompat="@drawable/camden_blue_logo" />
 
         <Button
