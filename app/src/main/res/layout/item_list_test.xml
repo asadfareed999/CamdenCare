@@ -20,7 +20,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="@dimen/_5sdp"
-            android:text="@string/str_date"
+            android:text="4 Apr. 2020"
             android:layout_weight="0.3"
             android:textColor="#000"
             android:textSize="@dimen/_12ssp" />
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/_5sdp"
             android:layout_weight="0.4"
-            android:text="@string/str_test"
+            android:text="Lipid profile "
             android:textColor="#000"
             android:textSize="@dimen/_12ssp" />
         <TextView
@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
             android:padding="@dimen/_5sdp"
-            android:text="@string/str_status"
+            android:text="Not Ready"
             android:textColor="#000"
             android:textSize="@dimen/_12ssp" />
     </TableRow>
