@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/signup_signin" />
+        app:srcCompat="@drawable/bg_signup" />
 
         <LinearLayout
             android:layout_width="@dimen/_220sdp"
@@ -35,13 +35,13 @@
             android:layout_height="@dimen/_70sdp"
             android:layout_gravity="center"
             android:padding="@dimen/_7sdp"
-            app:srcCompat="@drawable/camden_blue_logo" />
+            app:srcCompat="@drawable/logo_app_verti" />
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_shape"
+            android:background="@drawable/bg_btn_gradient"
             android:text="@string/login"
             android:textColor="@color/colorButtonText"
             android:layout_marginTop="@dimen/_10sdp"
