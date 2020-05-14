@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    // startup
+    <dimen name="dimen_startup_linearlayout_width">@dimen/_220sdp</dimen>
+    <dimen name="dimen_linearlayout_margin_bottom">@dimen/_20sdp</dimen>
+    <dimen name="dimen_startup_logo_height">@dimen/_70sdp</dimen>
+    <dimen name="dimen_startup_logo_width">@dimen/_220sdp</dimen>
+    <dimen name="dimen_logo_padding">@dimen/_7sdp</dimen>
+    <dimen name="dimen_startup_button_top">@dimen/_10sdp</dimen>
+    <dimen name="dimen_startup_button_left_right">@dimen/_40sdp</dimen>
+    <dimen name="dimen_startup_button_bottom">@dimen/_30sdp</dimen>
+    // login
+    <dimen name="dimen_login_image_width">@dimen/_170sdp</dimen>
+    <dimen name="dimen_login_image_height">@dimen/_120sdp</dimen>
+    <dimen name="dimen_login_image_top">@dimen/_70sdp</dimen>
+    <dimen name="dimen_login_inputlayout_left_right">@dimen/_30sdp</dimen>
+    <dimen name="dimen_login_inputlayout_top">@dimen/_40sdp</dimen>
+    <dimen name="dimen_login_inputlayout2_top">@dimen/_10sdp</dimen>
+    <dimen name="dimen_login_inputlayout_drawablepadding">@dimen/_5sdp</dimen>
+    <dimen name="dimen_login_button_margin">@dimen/_30sdp</dimen>
+
+
+</resources>

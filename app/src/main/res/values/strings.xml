@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Camden Care</string>
-    <string name="enter">Enter</string>
-    <string name="enter_mobile_number">Enter Mobile Number</string>
-    <string name="enter_mrn">Enter MRN</string>
-    <string name="login">Login</string>
-    <string name="camden_care_logo">camden Care Logo</string>
-    <string name="str_name">Elizabeth Scott</string>
+    <string name="str_enter">Enter</string>
+    <string name="str_enter_mobile_number">Enter Mobile Number</string>
+    <string name="str_enter_mrn">Enter MRN</string>
+    <string name="str_login">Login</string>
+    <string name="str_camden_care_logo">camden Care Logo</string>
+    <string name="str_name">Elizabeth Scottcxxxxxxxx</string>
 </resources>
