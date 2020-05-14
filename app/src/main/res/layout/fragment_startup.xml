@@ -34,7 +34,7 @@
             android:layout_width="@dimen/_220sdp"
             android:layout_height="@dimen/_70sdp"
             android:layout_gravity="center"
-            android:padding="@dimen/_7ssp"
+            android:padding="@dimen/_7sdp"
             app:srcCompat="@drawable/camden_blue_logo" />
 
         <Button
