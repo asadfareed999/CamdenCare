@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/login_bg_shape">
+    android:background="@drawable/bg_app_gradient">
 
     <ImageView
         android:id="@+id/img_camdencare_login"
@@ -17,7 +17,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:scaleType="centerCrop"
         android:contentDescription="@string/camden_care_logo"
-        app:srcCompat="@drawable/camden_logo_login" />
+        app:srcCompat="@drawable/logo_app_horiz" />
+
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -29,7 +30,7 @@
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_40sdp"
-        app:startIconDrawable="@drawable/ic_person"
+        app:startIconDrawable="@drawable/ic_login_mrn"
         app:startIconTint="@color/colorWhite"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_camdencare_login">
@@ -55,7 +56,7 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:layout_marginStart="@dimen/_30sdp"
         android:layout_marginEnd="@dimen/_30sdp"
-        app:startIconDrawable="@drawable/ic_mail"
+        app:startIconDrawable="@drawable/ic_login_number"
         app:startIconTint="@color/colorWhite"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textfield_mrn">
@@ -77,7 +78,7 @@
         android:id="@+id/btn_enter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/button_enter_shape"
+        android:background="@drawable/bg_btn_rounded"
         android:layout_margin="@dimen/_30sdp"
         android:text="@string/enter"
         android:textColor="@color/colorButtonText"
