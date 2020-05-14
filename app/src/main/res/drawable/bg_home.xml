@@ -6,8 +6,8 @@
         </shape>
     </item>
     <item
-        android:top="210dp"
-        android:bottom="80dp"
+        android:top="180dp"
+        android:bottom="70dp"
         android:left="-70dp"
         android:right="-70dp">
 

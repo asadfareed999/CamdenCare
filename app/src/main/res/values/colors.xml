@@ -9,5 +9,6 @@
     <color name="colorButtonText">#E8FCFF</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorSkyBlue">#57BEFF</color>
+    <color name="colorCardview">#CCD8E6</color>
 
 </resources>
