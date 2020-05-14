@@ -18,6 +18,19 @@
     <dimen name="dimen_login_inputlayout2_top">@dimen/_10sdp</dimen>
     <dimen name="dimen_login_inputlayout_drawablepadding">@dimen/_5sdp</dimen>
     <dimen name="dimen_login_button_margin">@dimen/_30sdp</dimen>
-
-
+    // home
+    <dimen name="dimen_home_top">@dimen/_10sdp</dimen>
+    <dimen name="dimen_home_text">@dimen/_16ssp</dimen>
+    <dimen name="dimen_home_row_text">@dimen/_12ssp</dimen>
+    <dimen name="dimen_home_name_top">@dimen/_30sdp</dimen>
+    <dimen name="dimen_home_name_start">@dimen/_30sdp</dimen>
+    <dimen name="dimen_home_image">@dimen/_80sdp</dimen>
+    <dimen name="dimen_home_image_margin">@dimen/_50sdp</dimen>
+    <dimen name="dimen_home_cardview_elevation">@dimen/_5sdp</dimen>
+    <dimen name="dimen_home_card_margin">@dimen/_10sdp</dimen>
+    <dimen name="dimen_home_table_padding">@dimen/_10sdp</dimen>
+    <dimen name="dimen_home_row_text_padding">@dimen/_5sdp</dimen>
+    // test item
+    <dimen name="dimen_item_row_text_padding">@dimen/_5sdp</dimen>
+    <dimen name="dimen_item_row_text">@dimen/_12ssp</dimen>
 </resources>

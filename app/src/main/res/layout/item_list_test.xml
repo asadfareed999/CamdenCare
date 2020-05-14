@@ -19,29 +19,29 @@
             android:id="@+id/tv_list_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_5sdp"
-            android:text="4 Apr. 2020"
+            android:padding="@dimen/dimen_item_row_text_padding"
+            android:text="@string/Str_4_apr_2020"
             android:layout_weight="0.3"
             android:textColor="#000"
-            android:textSize="@dimen/_12ssp" />
+            android:textSize="@dimen/dimen_item_row_text" />
         <TextView
             android:id="@+id/tv_list_test"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_5sdp"
+            android:padding="@dimen/dimen_item_row_text_padding"
             android:layout_weight="0.4"
-            android:text="Lipid profile "
+            android:text="@string/Str_lipid_profile"
             android:textColor="#000"
-            android:textSize="@dimen/_12ssp" />
+            android:textSize="@dimen/dimen_item_row_text" />
         <TextView
             android:id="@+id/tv_list_status"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.3"
-            android:padding="@dimen/_5sdp"
-            android:text="Not Ready"
+            android:padding="@dimen/dimen_item_row_text_padding"
+            android:text="@string/Str_not_ready"
             android:textColor="#000"
-            android:textSize="@dimen/_12ssp" />
+            android:textSize="@dimen/dimen_item_row_text" />
     </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
