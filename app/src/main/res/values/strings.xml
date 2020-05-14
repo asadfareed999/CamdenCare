@@ -6,4 +6,11 @@
     <string name="str_login">Login</string>
     <string name="str_camden_care_logo">camden Care Logo</string>
     <string name="str_name">Elizabeth Scott</string>
+    <string name="str_status">Status</string>
+    <string name="str_test">Test</string>
+    <string name="str_date">Date</string>
+    <string name="str_summary">Summary</string>
+    <string name="str_logout">Logout</string>
+    <string name="str__23_yrs">23 yrs</string>
+    <string name="str_id_3456_3432_1234">ID: 3456-3432-1234</string>
 </resources>
