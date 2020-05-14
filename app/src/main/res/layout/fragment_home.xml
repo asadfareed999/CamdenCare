@@ -4,9 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bg_home">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_135sdp"
+        android:background="@color/colorDarkBlue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/tv_camden_care"
         android:layout_width="wrap_content"
@@ -79,17 +85,16 @@
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_320sdp"
-        android:layout_marginTop="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_height="@dimen/_350sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:layout_marginLeft="@dimen/_10sdp"
         android:layout_marginRight="@dimen/_10sdp"
         android:background="@color/colorCardview"
         card_view:cardElevation="@dimen/_5sdp"
-        card_view:layout_constraintEnd_toStartOf="parent"
-        card_view:layout_constraintTop_toBottomOf="@id/tv_id"
-        card_view:layout_constraintBottom_toBottomOf="parent"
-        card_view:layout_constraintVertical_bias="0">
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@id/view_top"
+        card_view:layout_constraintBottom_toTopOf="@id/view_bottom">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -163,6 +168,13 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+    <View
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorDarkBlue"/>
     <TextView
         android:id="@+id/tv_logout"
         android:layout_width="wrap_content"
