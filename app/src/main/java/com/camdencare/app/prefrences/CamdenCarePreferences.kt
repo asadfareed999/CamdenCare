@@ -15,7 +15,7 @@ class CamdenCarePreferences(private val context: Context) :
         putString("name_key",name)
     }
     fun saveAge(age:String){
-        getString("age_key",age)
+        putString("age_key",age)
     }
     fun getMrn():String{
         return getString("mrn_key","")!!

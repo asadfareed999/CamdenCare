@@ -40,7 +40,8 @@ class HomeFragment() : Fragment() {
         textViewMrn=view.findViewById(R.id.tv_id)
         textViewName.text=camdenCarePreferences.getName()
         textViewAge.text=camdenCarePreferences.getAge()
-        textViewMrn.text=camdenCarePreferences.getMrn()
+        val textMRN=view.context.getString(R.string.Str_mrn) + camdenCarePreferences.getMrn()
+        textViewMrn.text=textMRN
         textViewLogout.setOnClickListener {
             camdenCarePreferences.logout()
             val action = HomeFragmentDirections.actionHomeFragmentToLoginFragment()
