@@ -22,7 +22,7 @@ class StartupFragment() : Fragment() {
         loginButton.setOnClickListener {
             val camdenCarePreferences=CamdenCarePreferences(view.context)
             if (camdenCarePreferences.isLogin()) {
-                val action = StartupFragmentDirections.actionStartupFragmentToLoginFragment()
+                val action = StartupFragmentDirections.actionLoginFragmentToHomeFragment()
                 view.findNavController().navigate(action)
             }else{
                 val action = StartupFragmentDirections.actionStartupFragmentToLoginFragment()
