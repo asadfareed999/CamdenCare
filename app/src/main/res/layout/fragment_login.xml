@@ -41,8 +41,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorWhite"
             android:drawablePadding="@dimen/dimen_login_inputlayout_drawablepadding"
+            android:inputType="numberDecimal"
             android:maxLines="1"
-            android:maxLength="15"
             android:text=""
             />
     </com.google.android.material.textfield.TextInputLayout>
@@ -67,8 +67,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorWhite"
             android:drawablePadding="@dimen/dimen_login_inputlayout_drawablepadding"
+            android:inputType="number"
             android:maxLines="1"
-            android:maxLength="11"
             android:text=""
             />
 

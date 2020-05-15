@@ -5,8 +5,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import com.example.asadfareed.twidlee2.fragments.HomeFragment
-import com.example.asadfareed.twidlee2.fragments.StartupFragment
+
 
 class MainActivity : AppCompatActivity() {
 

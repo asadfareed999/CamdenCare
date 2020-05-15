@@ -1,4 +1,4 @@
-package com.example.asadfareed.twidlee2.fragments
+package com.camdencare.app
 
 import CamdenCarePreferences
 import android.app.ActionBar
@@ -15,7 +15,6 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.camdencare.app.R
-import com.example.asadfareed.twidlee2.adapter.TestAdapter
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import org.json.JSONObject
@@ -26,14 +25,23 @@ class HomeFragment() : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: TestAdapter
     private lateinit var textViewLogout: TextView
+    private lateinit var textViewName: TextView
+    private lateinit var textViewAge: TextView
+    private lateinit var textViewMrn: TextView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
+        val camdenCarePreferences=CamdenCarePreferences(view.context)
         recyclerView = view.fragmentHomeRecyclerView
         textViewLogout=view.findViewById(R.id.tv_logout)
+        textViewName=view.findViewById(R.id.tv_name)
+        textViewAge=view.findViewById(R.id.tv_age)
+        textViewMrn=view.findViewById(R.id.tv_id)
+        textViewName.text=camdenCarePreferences.getName()
+        textViewAge.text=camdenCarePreferences.getAge()
+        textViewMrn.text=camdenCarePreferences.getMrn()
         textViewLogout.setOnClickListener {
-            val camdenCarePreferences=CamdenCarePreferences(view.context)
             camdenCarePreferences.logout()
             val action = HomeFragmentDirections.actionHomeFragmentToLoginFragment()
             view.findNavController().navigate(action)
