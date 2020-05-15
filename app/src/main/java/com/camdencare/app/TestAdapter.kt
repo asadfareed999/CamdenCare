@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.camdencare.app.networking.responsemodels.Orders
+import com.camdencare.app.utilities.Utils
 
 
 class TestAdapter(ordersList: List<Orders>) : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
@@ -40,7 +41,8 @@ class TestAdapter(ordersList: List<Orders>) : RecyclerView.Adapter<TestAdapter.V
             testList: List<Orders>,
             position: Int
         ) {
-            textViewDate.text=testList.get(position).created_at
+            val date=Utils.parseDate(testList.get(position).created_at)
+            textViewDate.text=date
             textViewTest.text=testList.get(position).test
             val statusString=testList.get(position).status
             if (statusString.equals("verified") || statusString.equals("delivered") ) {

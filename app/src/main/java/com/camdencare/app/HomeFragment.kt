@@ -34,10 +34,31 @@ class HomeFragment() : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_home, container, false)
         val camdenCarePreferences=CamdenCarePreferences(view.context)
         initViews(view)
+        initApiListener(view)
         setProfileInfo( view)
         clickListeners( view)
         exeOrdersApi(camdenCarePreferences.getMrn())
         return view
+    }
+
+    private fun initApiListener(view: View) {
+        orderApiListener = object : OnResponseListener<ResponseOrders> {
+            override fun onSuccess(response: ResponseOrders?) {
+                val ordersList: List<Orders> = response!!.orders
+                recyclerView.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
+                adapter = TestAdapter(ordersList)
+                recyclerView.adapter = adapter
+                adapter.notifyDataSetChanged()
+            }
+
+            override fun onFailure(t: Throwable) {
+                Snackbar.make(view, t.message.toString(), Snackbar.LENGTH_LONG).show()
+            }
+
+            override fun onCancel() {
+            }
+
+        }
     }
 
     private fun exeOrdersApi(patientId: String) {
@@ -70,7 +91,7 @@ class HomeFragment() : Fragment() {
         textViewMrn = view.findViewById(R.id.tv_id)
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+   /* override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         orderApiListener = object : OnResponseListener<ResponseOrders> {
@@ -90,5 +111,5 @@ class HomeFragment() : Fragment() {
             }
 
         }
-    }
+    }*/
 }
