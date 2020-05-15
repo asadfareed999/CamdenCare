@@ -1,22 +1,17 @@
 package com.camdencare.app
 
-import android.location.Location
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.fragment.app.FragmentActivity
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.camdencare.app.R
-import java.text.DecimalFormat
-import java.text.SimpleDateFormat
-import java.util.*
-import kotlin.collections.ArrayList
+import com.camdencare.app.networking.responsemodels.Orders
 
 
-class TestAdapter() : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
+class TestAdapter(ordersList: List<Orders>) : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
 
-    //this method is returning the view for each item in the list
+    private val testList=ordersList
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             val v =
                 LayoutInflater.from(parent.context).inflate(R.layout.item_list_test
@@ -26,19 +21,31 @@ class TestAdapter() : RecyclerView.Adapter<TestAdapter.ViewHolder>() {
 
     //this method is binding the data on the list
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.bindItems()
+            holder.bindItems(testList,position)
     }
 
     //this method is giving the size of the list
     override fun getItemCount(): Int {
-        return 26
+        return testList.size
     }
 
     //the class is hodling the list view
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),View.OnClickListener {
 
-        fun bindItems() {
+        private  val textViewDate: TextView=itemView.findViewById(R.id.tv_list_date)
+        private  val textViewTest: TextView=itemView.findViewById(R.id.tv_list_test)
+        private  val textViewStatus: TextView=itemView.findViewById(R.id.tv_list_status)
 
+        fun bindItems(
+            testList: List<Orders>,
+            position: Int
+        ) {
+            textViewDate.text=testList.get(position).created_at
+            textViewTest.text=testList.get(position).test
+            val statusString=testList.get(position).status
+            if (statusString.equals("verified") || statusString.equals("delivered") ) {
+                textViewStatus.text = "View"
+            }
         }
 
         override fun onClick(v: View?) {
