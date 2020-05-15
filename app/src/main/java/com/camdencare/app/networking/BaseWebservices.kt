@@ -18,7 +18,7 @@ interface OnResponseListener<T> {
 
 object BaseWebservices {
 
-    private const val BASE_URL = "http://testbe.ranecs.com"
+    private const val BASE_URL = "http://testbe.ranecs.com/"
 
     private var retrofit: Retrofit? = null
     private val okHttpClientBuilder = OkHttpClient.Builder()
