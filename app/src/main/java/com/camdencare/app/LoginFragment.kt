@@ -29,12 +29,9 @@ class LoginFragment() : Fragment() {
         enterButton.setOnClickListener {
            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
             view.findNavController().navigate(action)
-    }
-            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+            }
             exeLoginApi()
-//            view.findNavController().navigate(action)
-        }
-    return view
+            return view
     }
 
     private fun exeLoginApi() {
