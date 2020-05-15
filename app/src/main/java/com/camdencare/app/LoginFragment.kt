@@ -27,10 +27,10 @@ class LoginFragment() : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_login, container, false)
         enterButton = view.findViewById(R.id.btn_enter)
         enterButton.setOnClickListener {
-           val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
-            view.findNavController().navigate(action)
-            }
+            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+            // view.findNavController().navigate(action) }
             exeLoginApi()
+        }
             return view
     }
 
