@@ -8,24 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
-        <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:textSize">@dimen/_13sdp</item>
-        <item name="colorControlNormal">@color/colorTilHint</item>
-        //added attributes
-        <item name="colorControlActivated">@color/colorTilHint</item>
-        <item name="colorControlHighlight">@color/colorTilHint</item>
-
-    </style>
-
-    <style name="TextInputLayout" parent="TextAppearance.AppCompat">
+    <style name="TextInputLayout" parent="Widget.Design.TextInputLayout">
         <!-- Hint color and label color in FALSE state -->
         <item name="android:textColorHint">@color/colorWhite</item>
         <item name="android:textSize">@dimen/_13ssp</item>
         <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
         <item name="colorAccent">@color/colorWhite</item>
+        <item name="android:colorAccent">@color/colorWhite</item>
         <item name="colorControlNormal">@color/colorWhite</item>
         <item name="colorControlActivated">@color/colorWhite</item>
     </style>
 
+    <style name="TextInputLayoutHint" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorTilHint</item>
+    </style>
 </resources>

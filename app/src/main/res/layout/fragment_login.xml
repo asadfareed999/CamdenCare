@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_app_gradient">
 
     <ImageView
@@ -12,65 +11,64 @@
         android:layout_width="@dimen/dimen_login_image_width"
         android:layout_height="@dimen/dimen_login_image_height"
         android:layout_marginTop="@dimen/dimen_login_image_top"
+        android:contentDescription="@string/str_camden_care_logo"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/str_camden_care_logo"
         app:srcCompat="@drawable/logo_app_horiz" />
-
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textfield_mrn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/str_enter_mrn"
-        android:textColorHint="@color/colorButtonText"
         android:layout_marginStart="@dimen/dimen_login_inputlayout_left_right"
-        android:layout_marginEnd="@dimen/dimen_login_inputlayout_left_right"
         android:layout_marginTop="@dimen/dimen_login_inputlayout_top"
-        app:startIconDrawable="@drawable/ic_login_mrn"
-        app:startIconTint="@color/colorWhite"
+        android:layout_marginEnd="@dimen/dimen_login_inputlayout_left_right"
+        android:hint="@string/str_enter_mrn"
+        android:theme="@style/TextInputLayout"
+        app:hintTextAppearance="@style/TextInputLayoutHint"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_camdencare_login">
+        app:layout_constraintTop_toBottomOf="@id/img_camdencare_login"
+        app:startIconDrawable="@drawable/ic_login_mrn"
+        app:startIconTint="@color/colorWhite">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_mrn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorWhite"
             android:drawablePadding="@dimen/dimen_login_inputlayout_drawablepadding"
             android:inputType="numberDecimal"
             android:maxLines="1"
             android:text=""
-            />
+            android:textColor="@color/colorWhite" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textfield_mobile_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/str_enter_mobile_number"
-        android:textColorHint="@color/colorButtonText"
-        android:layout_marginTop="@dimen/dimen_login_inputlayout2_top"
         android:layout_marginStart="@dimen/dimen_login_inputlayout_left_right"
+        android:layout_marginTop="@dimen/dimen_login_inputlayout2_top"
         android:layout_marginEnd="@dimen/dimen_login_inputlayout_left_right"
-        app:startIconDrawable="@drawable/ic_login_number"
-        app:startIconTint="@color/colorWhite"
+        android:hint="@string/str_enter_mobile_number"
+        android:theme="@style/TextInputLayout"
+        app:hintTextAppearance="@style/TextInputLayoutHint"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textfield_mrn">
+        app:layout_constraintTop_toBottomOf="@id/textfield_mrn"
+        app:startIconDrawable="@drawable/ic_login_number"
+        app:startIconTint="@color/colorWhite">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorWhite"
             android:drawablePadding="@dimen/dimen_login_inputlayout_drawablepadding"
             android:inputType="number"
             android:maxLines="1"
             android:text=""
-            />
+            android:textColor="@color/colorWhite" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,13 +76,13 @@
         android:id="@+id/btn_enter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_btn_rounded"
         android:layout_margin="@dimen/dimen_login_button_margin"
+        android:background="@drawable/bg_btn_rounded"
         android:text="@string/str_enter"
-        android:textColor="@color/colorButtonText"
         android:textAllCaps="false"
+        android:textColor="@color/colorButtonText"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textfield_mobile_number"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/textfield_mobile_number" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
