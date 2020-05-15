@@ -1,5 +1,6 @@
 package com.example.asadfareed.twidlee2.fragments
 
+import CamdenCarePreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,12 +8,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.camdencare.app.R
 import com.camdencare.app.networking.BaseWebservices
 import com.camdencare.app.networking.OnResponseListener
 import com.camdencare.app.networking.responsemodels.ResponseLogin
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
+import java.util.*
 
 
 class LoginFragment() : Fragment() {
@@ -50,8 +53,10 @@ class LoginFragment() : Fragment() {
             inputLayoutMRN.error="Enter a valid MRN"
         }else if (number.isEmpty()){
             inputLayoutNumber.isErrorEnabled=true
+            inputLayoutMRN.isErrorEnabled=false
             inputLayoutNumber.error="Enter a valid Number"
         } else {
+            inputLayoutNumber.isErrorEnabled=false
             progressBar.visibility=View.VISIBLE
             progressBar.isIndeterminate=true
             val call = apiEndpointClient.login(mrn, number)
@@ -68,7 +73,12 @@ class LoginFragment() : Fragment() {
                 val MRN:String=response!!.mrn
                 val FullName:String=response.fullName
                 val Age:String=response.age
-                Snackbar.make(view, "Login Success", Snackbar.LENGTH_LONG).show()
+                val camdenCarePreferences=CamdenCarePreferences(view.context)
+                camdenCarePreferences.saveMRN(MRN)
+                camdenCarePreferences.saveName(FullName)
+                camdenCarePreferences.saveAge(Age)
+                val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+                view.findNavController().navigate(action)
             }
 
             override fun onFailure(t: Throwable) {

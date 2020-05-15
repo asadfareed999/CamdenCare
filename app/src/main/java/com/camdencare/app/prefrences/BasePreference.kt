@@ -30,4 +30,8 @@ abstract class BasePreference(private val context: Context, private val fileName
     fun getBool(key: String, defValue: Boolean): Boolean{
         return sharedPreferences.getBoolean(key,defValue)
     }
+    fun clearSharedPrefs(){
+        sharedPreferences.edit().clear().apply()
+    }
+
 }

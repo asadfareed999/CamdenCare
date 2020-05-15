@@ -1,5 +1,6 @@
 package com.example.asadfareed.twidlee2.fragments
 
+import CamdenCarePreferences
 import android.app.ActionBar
 import android.graphics.Color
 import android.os.Bundle
@@ -32,6 +33,8 @@ class HomeFragment() : Fragment() {
         recyclerView = view.fragmentHomeRecyclerView
         textViewLogout=view.findViewById(R.id.tv_logout)
         textViewLogout.setOnClickListener {
+            val camdenCarePreferences=CamdenCarePreferences(view.context)
+            camdenCarePreferences.logout()
             val action = HomeFragmentDirections.actionHomeFragmentToLoginFragment()
             view.findNavController().navigate(action)
         }

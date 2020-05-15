@@ -1,5 +1,6 @@
 package com.example.asadfareed.twidlee2.fragments
 
+import CamdenCarePreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,8 +20,14 @@ class StartupFragment() : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_startup, container, false)
         loginButton=view.findViewById(R.id.btn_login)
         loginButton.setOnClickListener {
-            val action = StartupFragmentDirections.actionStartupFragmentToLoginFragment()
-            view.findNavController().navigate(action)
+            val camdenCarePreferences=CamdenCarePreferences(view.context)
+            if (camdenCarePreferences.isLogin()) {
+                val action = StartupFragmentDirections.actionStartupFragmentToLoginFragment()
+                view.findNavController().navigate(action)
+            }else{
+                val action = StartupFragmentDirections.actionStartupFragmentToLoginFragment()
+                view.findNavController().navigate(action)
+            }
         }
         return view
     }

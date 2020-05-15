@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_startupFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true"
+            app:destination="@id/homeFragment"  />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
