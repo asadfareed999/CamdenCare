@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#01488D</color>
+    <color name="colorPrimaryDark">#042F54</color>
+    <color name="colorAccent">#005BB8</color>
     <color name="colorLightBlue">#2A7ED4</color>
     <color name="colorBlue">#1B68B8</color>
     <color name="colorDarkBlue">#0E5CA6</color>
@@ -11,5 +11,6 @@
     <color name="colorSkyBlue">#57BEFF</color>
     <color name="colorCardview">#CCD8E6</color>
     <color name="colorCivBorder">#FFB2B2B2</color>
+    <color name="colorTilHint">@color/colorWhite</color>
 
 </resources>
