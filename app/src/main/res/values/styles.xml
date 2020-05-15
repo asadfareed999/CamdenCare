@@ -28,4 +28,7 @@
         <item name="colorControlActivated">@color/colorWhite</item>
     </style>
 
+    <style name="TextInputLayoutHint" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorTilHint</item>
+    </style>
 </resources>
