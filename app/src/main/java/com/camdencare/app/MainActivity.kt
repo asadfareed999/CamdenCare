@@ -15,13 +15,5 @@ class MainActivity : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
-        loadFragment(StartupFragment(),this)
-    }
-
-    fun loadFragment(fragment: Fragment, activity: FragmentActivity?) {
-        val transaction = activity!!.supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container_fragment, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
     }
 }

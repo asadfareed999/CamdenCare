@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.navigation.findNavController
 import com.camdencare.app.R
 
 class LoginFragment() : Fragment() {
@@ -18,16 +19,8 @@ class LoginFragment() : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_login, container, false)
         enterButton=view.findViewById(R.id.btn_enter)
         enterButton.setOnClickListener {
-            loadFragment(HomeFragment(),view.context as FragmentActivity)
-        }
+            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+            view.findNavController().navigate(action)        }
         return view
     }
-
-    fun loadFragment(fragment: Fragment, activity: FragmentActivity?) {
-        val transaction = activity!!.supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container_fragment, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
-
 }
