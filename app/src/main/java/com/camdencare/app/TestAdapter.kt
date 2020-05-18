@@ -3,7 +3,6 @@ package com.camdencare.app
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.camdencare.app.networking.responsemodels.Orders
@@ -41,43 +40,39 @@ class TestAdapter(val homeFragment: HomeFragment, ordersList: List<Orders>) :
         private val textViewDate: TextView = itemView.findViewById(R.id.tv_list_date)
         private val textViewTest: TextView = itemView.findViewById(R.id.tv_list_test)
         private val textViewStatus: TextView = itemView.findViewById(R.id.tv_list_status)
-        private val btnView: Button = itemView.findViewById(R.id.btnView)
+        private val textViewReport: TextView = itemView.findViewById(R.id.tv_list_view_report)
 
         fun bindItems(
             testList: List<Orders>,
             position: Int
         ) {
-            val date = Utils.parseDate(testList.get(position).created_at)
+            val date =itemView.context.getString(R.string.Str_date)+" "+
+                    Utils.parseDate(testList.get(position).created_at)
             textViewDate.text = date
             textViewTest.text = testList.get(position).test
             val statusString = testList.get(position).status
             if (statusString.equals("verified", true)
                 || statusString.equals("delivered", true)) {
-                toggleBtnViewVisibility(visible = true)
-                btnView.setOnClickListener(this)
+                //toggleBtnViewVisibility(visible = true)
+                val status=itemView.context.getString(R.string.Str_results)+" Ready"
+                textViewStatus.text=status
+                textViewReport.visibility=View.VISIBLE
+                textViewReport.setOnClickListener(this)
             } else {
-                toggleBtnViewVisibility(visible = false)
+                val status=itemView.context.getString(R.string.Str_results)+" Not Ready"
+                textViewStatus.text=status
             }
-            if (position == 0 || position == 2) {
-                toggleBtnViewVisibility(visible = true)
-
-            }
-            btnView.setOnClickListener(this)
-
+           /* if (position==0 || position==2){
+                val status=itemView.context.getString(R.string.Str_results)+" Ready"
+                textViewStatus.text=status
+                textViewReport.visibility=View.VISIBLE
+                textViewReport.setOnClickListener(this)
+            }*/
         }
 
         override fun onClick(v: View?) {
             homeFragment.viewReport(testList[adapterPosition].order_id)
         }
 
-        fun toggleBtnViewVisibility(visible: Boolean) {
-            if (visible) {
-                btnView.visibility = View.VISIBLE
-                textViewStatus.visibility = View.GONE
-            } else {
-                btnView.visibility = View.GONE
-                textViewStatus.visibility = View.VISIBLE
-            }
-        }
     }
 }

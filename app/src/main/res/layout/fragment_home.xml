@@ -102,7 +102,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view_top">
 
-        <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -113,60 +114,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="@color/colorCardview">
 
-                <TableLayout
-                    android:id="@+id/table_layout"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/tv_summary"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorCardview"
-                    android:orientation="vertical"
+                    android:text="@string/str_summary"
+                    android:textColor="@color/colorDarkBlue"
+                    style="@style/TextViewRobotoBold"
+                    android:textStyle="bold"
                     android:paddingStart="@dimen/dimen_home_table_padding"
-                    android:paddingEnd="@dimen/dimen_home_table_padding">
-
-                    <TextView
-                        android:id="@+id/tv_summary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/str_summary"
-                        android:textColor="@color/colorDarkBlue"
-                        style="@style/TextViewRobotoBold"
-                        android:textStyle="bold" />
-
-                    <TableRow
-                        android:id="@+id/display_row"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:weightSum="1">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.3"
-                            android:padding="@dimen/dimen_home_row_text_padding"
-                            android:text="@string/str_date"
-                            android:textColor="#000"
-                            style="@style/TextViewRobotoBoldRegular" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.4"
-                            android:padding="@dimen/dimen_home_row_text_padding"
-                            android:text="@string/str_test"
-                            android:textColor="#000"
-                            style="@style/TextViewRobotoBoldRegular" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.3"
-                            android:padding="@dimen/dimen_home_row_text_padding"
-                            android:text="@string/str_status"
-                            android:textColor="#000"
-                            style="@style/TextViewRobotoBoldRegular" />
-                    </TableRow>
-                </TableLayout>
+                    android:paddingEnd="@dimen/dimen_home_table_padding"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/fragmentHomeRecyclerView"
@@ -177,6 +137,7 @@
                     android:paddingEnd="@dimen/dimen_home_table_padding"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:itemCount="19"
+                    android:layout_marginTop="@dimen/_5sdp"
                     tools:listitem="@layout/item_list_test">
 
                 </androidx.recyclerview.widget.RecyclerView>
