@@ -39,17 +39,21 @@
 
         <TextView
             android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_home_name_start"
             android:layout_marginTop="@dimen/dimen_home_name_top"
-            android:maxLength="15"
-            android:text="@string/str_name"
+            android:maxLines="2"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="Muhammad Amir Ali Khan Abdullah  "
+            android:ellipsize="end"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/dimen_home_text"
             android:textStyle="bold"
+            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_camden_care" />
+            app:layout_constraintTop_toBottomOf="@id/tv_camden_care"
+            app:layout_constraintEnd_toStartOf="@id/iv_profile"/>
 
         <TextView
             android:id="@+id/tv_age"

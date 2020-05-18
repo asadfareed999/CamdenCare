@@ -22,4 +22,7 @@
     <style name="TextInputLayoutHint" parent="@android:style/TextAppearance">
         <item name="android:textColor">@color/colorTilHint</item>
     </style>
+    <style name="TextViewStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorTilHint</item>
+    </style>
 </resources>
