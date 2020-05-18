@@ -24,7 +24,7 @@
             android:padding="@dimen/dimen_item_row_text_padding"
             android:text="@string/Str_4_apr_2020"
             android:textColor="#000"
-            android:textSize="@dimen/dimen_item_row_text" />
+            style="@style/TextViewRoboto" />
 
         <TextView
             android:id="@+id/tv_list_test"
@@ -34,7 +34,7 @@
             android:padding="@dimen/dimen_item_row_text_padding"
             android:text="@string/Str_lipid_profile"
             android:textColor="#000"
-            android:textSize="@dimen/dimen_item_row_text" />
+            style="@style/TextViewRoboto" />
 
         <TextView
             android:id="@+id/tv_list_status"
@@ -44,7 +44,7 @@
             android:padding="@dimen/dimen_item_row_text_padding"
             android:text="@string/Str_not_ready"
             android:textColor="#000"
-            android:textSize="@dimen/dimen_item_row_text" />
+            style="@style/TextViewRoboto" />
 
         <Button
             android:id="@+id/btnView"
@@ -55,7 +55,7 @@
             android:padding="@dimen/dimen_item_row_text_padding"
             android:text="View"
             android:textColor="@color/colorTextWhite"
-            android:textSize="@dimen/dimen_item_row_text" />
+            style="@style/TextViewRoboto" />
     </TableRow>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
