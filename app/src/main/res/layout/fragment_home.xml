@@ -62,7 +62,7 @@
             android:maxLength="10"
             android:text="@string/str__23_yrs"
             android:textColor="@color/colorWhite"
-            style="@style/TextViewRobotoBold"
+            style="@style/TextViewRobotoRegular"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_name" />
 
@@ -74,7 +74,7 @@
             android:maxLength="20"
             android:text="@string/str_id_3456_3432_1234"
             android:textColor="@color/colorWhite"
-            style="@style/TextViewRobotoBold"
+            style="@style/TextViewRobotoRegular"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_age" />
 
@@ -146,7 +146,7 @@
                             android:padding="@dimen/dimen_home_row_text_padding"
                             android:text="@string/str_date"
                             android:textColor="#000"
-                            style="@style/TextViewRoboto" />
+                            style="@style/TextViewRobotoBoldRegular" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -155,7 +155,7 @@
                             android:padding="@dimen/dimen_home_row_text_padding"
                             android:text="@string/str_test"
                             android:textColor="#000"
-                            style="@style/TextViewRoboto" />
+                            style="@style/TextViewRobotoBoldRegular" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -164,7 +164,7 @@
                             android:padding="@dimen/dimen_home_row_text_padding"
                             android:text="@string/str_status"
                             android:textColor="#000"
-                            style="@style/TextViewRoboto" />
+                            style="@style/TextViewRobotoBoldRegular" />
                     </TableRow>
                 </TableLayout>
 
