@@ -6,12 +6,15 @@
     <dimen name="dimen_startup_logo_height">@dimen/_70sdp</dimen>
     <dimen name="dimen_startup_logo_width">@dimen/_220sdp</dimen>
     <dimen name="dimen_logo_padding">@dimen/_7sdp</dimen>
-    <dimen name="dimen_startup_button_top">@dimen/_10sdp</dimen>
+    <dimen name="dimen_startup_button_top">@dimen/_25sdp</dimen>
     <dimen name="dimen_startup_button_left_right">@dimen/_40sdp</dimen>
     <dimen name="dimen_startup_button_bottom">@dimen/_30sdp</dimen>
     // login
-    <dimen name="dimen_login_image_width">@dimen/_170sdp</dimen>
-    <dimen name="dimen_login_image_height">@dimen/_120sdp</dimen>
+    <dimen name="dimen_login_image_width">@dimen/_140sdp</dimen>
+    <dimen name="dimen_login_image_height">@dimen/_85sdp</dimen>
+    <dimen name="dimen_login_image_padding">@dimen/_10sdp</dimen>
+    <dimen name="dimen_login_textview_size">@dimen/_18ssp</dimen>
+    <dimen name="dimen_login_textview_top">@dimen/_5sdp</dimen>
     <dimen name="dimen_login_image_top">@dimen/_70sdp</dimen>
     <dimen name="dimen_login_inputlayout_left_right">@dimen/_30sdp</dimen>
     <dimen name="dimen_login_inputlayout_top">@dimen/_40sdp</dimen>
@@ -23,12 +26,12 @@
     <dimen name="dimen_home_text">@dimen/_16ssp</dimen>
     <dimen name="dimen_home_row_text">@dimen/_12ssp</dimen>
     <dimen name="dimen_home_name_top">@dimen/_30sdp</dimen>
-    <dimen name="dimen_home_name_start">@dimen/_30sdp</dimen>
+    <dimen name="dimen_home_name_start">@dimen/_16sdp</dimen>
     <dimen name="dimen_home_image">@dimen/_80sdp</dimen>
     <dimen name="dimen_home_image_margin">@dimen/_50sdp</dimen>
     <dimen name="dimen_home_cardview_elevation">@dimen/_5sdp</dimen>
     <dimen name="dimen_home_card_margin">@dimen/dimen_home_top</dimen>
-    <dimen name="dimen_home_table_padding">@dimen/_10sdp</dimen>
+    <dimen name="dimen_home_table_padding">@dimen/_8sdp</dimen>
     <dimen name="dimen_home_row_text_padding">@dimen/_5sdp</dimen>
     <dimen name="dimen_home_footer_height">@dimen/_40sdp</dimen>
     // test item

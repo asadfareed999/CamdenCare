@@ -16,5 +16,5 @@
     <string name="Str_4_apr_2020">4 Apr. 2020</string>
     <string name="Str_lipid_profile">Lipid profile</string>
     <string name="Str_not_ready">Not Ready</string>
-    <string name="Str_mrn">Mrn: </string>
+    <string name="Str_mrn">MRN: </string>
 </resources>
