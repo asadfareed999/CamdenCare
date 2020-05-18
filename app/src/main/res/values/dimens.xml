@@ -27,6 +27,7 @@
     <dimen name="dimen_home_row_text">@dimen/_12ssp</dimen>
     <dimen name="dimen_home_name_top">@dimen/_30sdp</dimen>
     <dimen name="dimen_home_name_start">@dimen/_16sdp</dimen>
+    <dimen name="dimen_home_name_end">@dimen/_8sdp</dimen>
     <dimen name="dimen_home_image">@dimen/_80sdp</dimen>
     <dimen name="dimen_home_image_margin">@dimen/_50sdp</dimen>
     <dimen name="dimen_home_cardview_elevation">@dimen/_5sdp</dimen>

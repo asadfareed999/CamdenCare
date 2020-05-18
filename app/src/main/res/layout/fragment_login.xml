@@ -9,15 +9,14 @@
     <ImageView
         android:id="@+id/img_camdencare_login"
         android:layout_width="@dimen/dimen_login_image_width"
-        android:layout_height="@dimen/dimen_login_image_height"
-        android:padding="@dimen/dimen_login_image_padding"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="h,0.66"
         android:layout_marginTop="@dimen/dimen_login_image_top"
         android:contentDescription="@string/str_camden_care_logo"
-        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_app_horiz2" />
+        app:srcCompat="@drawable/logo_app_horiz" />
 
     <TextView
         android:id="@+id/tv_app_name"
