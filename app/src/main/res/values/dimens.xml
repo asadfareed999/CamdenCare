@@ -3,12 +3,15 @@
     // startup
     <dimen name="dimen_startup_linearlayout_width">@dimen/_220sdp</dimen>
     <dimen name="dimen_linearlayout_margin_bottom">@dimen/_20sdp</dimen>
-    <dimen name="dimen_startup_logo_height">@dimen/_70sdp</dimen>
+    <!--  scale factor h  0.27-->
     <dimen name="dimen_startup_logo_width">@dimen/_220sdp</dimen>
+    <dimen name="dimen_startup_logo_height">@dimen/_60sdp</dimen>
     <dimen name="dimen_logo_padding">@dimen/_7sdp</dimen>
-    <dimen name="dimen_startup_button_top">@dimen/_25sdp</dimen>
+    <dimen name="dimen_startup_button_top">@dimen/_30sdp</dimen>
+    <dimen name="dimen_startup_button_w">@dimen/_120sdp</dimen>
     <dimen name="dimen_startup_button_left_right">@dimen/_40sdp</dimen>
     <dimen name="dimen_startup_button_bottom">@dimen/_30sdp</dimen>
+    <dimen name="dimen_startup_bottom">@dimen/_60sdp</dimen>
     // login
     <dimen name="dimen_login_image_width">@dimen/_140sdp</dimen>
     <dimen name="dimen_login_image_height">@dimen/_85sdp</dimen>
