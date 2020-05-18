@@ -8,9 +8,12 @@
     <color name="colorDarkBlue">#0E5CA6</color>
     <color name="colorButtonText">#E8FCFF</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
     <color name="colorSkyBlue">#57BEFF</color>
     <color name="colorCardview">#CCD8E6</color>
     <color name="colorCivBorder">#FFB2B2B2</color>
     <color name="colorTilHint">@color/colorWhite</color>
+    <color name="colorTextWhite">@color/colorWhite</color>
+    <color name="colorTextBlack">@color/colorBlack</color>
 
 </resources>

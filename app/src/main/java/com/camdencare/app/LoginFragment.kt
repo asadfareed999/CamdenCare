@@ -1,6 +1,6 @@
 package com.camdencare.app
 
-import CamdenCarePreferences
+import com.camdencare.app.prefrences.CamdenCarePreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,13 +9,11 @@ import android.widget.Button
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
-import com.camdencare.app.R
 import com.camdencare.app.networking.BaseWebservices
 import com.camdencare.app.networking.OnResponseListener
 import com.camdencare.app.networking.responsemodels.ResponseLogin
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
-import java.util.*
 
 
 class LoginFragment() : Fragment() {
@@ -73,7 +71,7 @@ class LoginFragment() : Fragment() {
                 val MRN:String=response!!.mrn
                 val FullName:String=response.fullName
                 val Age:String=response.age
-                val camdenCarePreferences=CamdenCarePreferences(view.context)
+                val camdenCarePreferences= CamdenCarePreferences(view.context)
                 camdenCarePreferences.saveMRN(MRN)
                 camdenCarePreferences.saveName(FullName)
                 camdenCarePreferences.saveAge(Age)

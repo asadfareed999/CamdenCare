@@ -1,3 +1,6 @@
+package com.camdencare.app.prefrences
+
+import com.camdencare.app.prefrences.BasePreference
 import android.content.Context
 import com.camdencare.app.utilities.STR_PREF_NAME
 

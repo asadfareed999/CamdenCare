@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/businessDayHour"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_8sdp"
     android:background="@color/colorCardview">
 
     <TableRow
+        android:id="@+id/display_row"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/display_row"
         android:weightSum="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:id="@+id/tv_list_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="0.3"
             android:padding="@dimen/dimen_item_row_text_padding"
             android:text="@string/Str_4_apr_2020"
-            android:layout_weight="0.3"
             android:textColor="#000"
             android:textSize="@dimen/dimen_item_row_text" />
+
         <TextView
             android:id="@+id/tv_list_test"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dimen_item_row_text_padding"
             android:layout_weight="0.4"
+            android:padding="@dimen/dimen_item_row_text_padding"
             android:text="@string/Str_lipid_profile"
             android:textColor="#000"
             android:textSize="@dimen/dimen_item_row_text" />
+
         <TextView
             android:id="@+id/tv_list_status"
             android:layout_width="0dp"
@@ -41,6 +44,17 @@
             android:padding="@dimen/dimen_item_row_text_padding"
             android:text="@string/Str_not_ready"
             android:textColor="#000"
+            android:textSize="@dimen/dimen_item_row_text" />
+
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_btn_gradient"
+            android:padding="@dimen/dimen_item_row_text_padding"
+            android:text="View"
+            android:textColor="@color/colorTextWhite"
             android:textSize="@dimen/dimen_item_row_text" />
     </TableRow>
 
