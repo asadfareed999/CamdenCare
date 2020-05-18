@@ -90,7 +90,7 @@ class HomeFragment() : Fragment() {
 
     private fun setProfileInfo(view: View) {
         val camdenCarePreferences = CamdenCarePreferences(view.context)
-        //textViewName.text = camdenCarePreferences.getName()
+        textViewName.text = camdenCarePreferences.getName()
         textViewAge.text = camdenCarePreferences.getAge()
         val textMRN = view.context.getString(R.string.Str_mrn) + camdenCarePreferences.getMrn()
         textViewMrn.text = textMRN
