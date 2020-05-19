@@ -90,6 +90,7 @@ class HomeFragment() : Fragment() {
         val camdenCarePreferences = CamdenCarePreferences(view.context)
         textViewName.text = camdenCarePreferences.getName()
         textViewAge.text = camdenCarePreferences.getAge()
+        //todo: use String.format()
         val textMRN = view.context.getString(R.string.str_home_header_mrn) + camdenCarePreferences.getMrn()
         textViewMrn.text = textMRN
     }

@@ -46,6 +46,7 @@ class LoginFragment() : Fragment() {
     private fun exeLoginApi() {
         val mrn:String=inputLayoutMRN.editText!!.text.toString()
         val number:String=inputLayoutNumber.editText!!.text.toString()
+        //todo:define in string res
         if (mrn.isEmpty()){
             inputLayoutMRN.isErrorEnabled=true
             inputLayoutMRN.error="Enter a valid MRN"
@@ -57,6 +58,7 @@ class LoginFragment() : Fragment() {
             inputLayoutNumber.isErrorEnabled=false
             progressBar.visibility=View.VISIBLE
             progressBar.isIndeterminate=true
+            //todo:disable button when api is calling to avoid multiple api calls due to multiple taps. enable button in api callback
             val call = apiEndpointClient.login(mrn, number)
             BaseWebservices.executeApi(call, loginApiListener)
         }
@@ -68,6 +70,7 @@ class LoginFragment() : Fragment() {
         loginApiListener = object : OnResponseListener<ResponseLogin> {
             override fun onSuccess(response: ResponseLogin?) {
                 progressBar.visibility=View.GONE
+                //todo:fix variable naming convention
                 val MRN:String=response!!.mrn
                 val FullName:String=response.fullName
                 val Age:String=response.age

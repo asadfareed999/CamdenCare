@@ -45,7 +45,6 @@ class OrdersAdapter(private val homeFragment: HomeFragment, private val ordersLi
         fun bindItems(
             position: Int
         ) {
-            //todo:user order in place of testList.get(position)
             val order = ordersList[position]
 
             val date = String.format(
