@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_home_name_start"
             android:maxLength="20"
-            android:text="@string/str_id_3456_3432_1234"
+            android:text="@string/str_home_header_id"
             android:textColor="@color/colorWhite"
             style="@style/TextViewRobotoRegular"
             app:layout_constraintStart_toStartOf="parent"

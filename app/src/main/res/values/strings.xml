@@ -12,10 +12,11 @@
     <string name="str_summary">Summary</string>
     <string name="str_logout">Logout</string>
     <string name="str__23_yrs">23 yrs</string>
-    <string name="str_id_3456_3432_1234">Mrn: 3456–3432-1234</string>
-    <string name="Str_date">Date: </string>
-    <string name="Str_lipid_profile">Lipid profile</string>
-    <string name="Str_results">Results: </string>
-    <string name="str_list_item_view"><u>View Report</u></string>
-    <string name="Str_mrn">MRN: </string>
+    <string name="str_home_header_id">Mrn: 3456–3432-1234</string>
+    <string name="str_home_list_item_date">Date: %s</string>
+    <string name="str_home_listitem_test">Lipid profile</string>
+    <string name="str_home_listitem_result_ready">Results: Ready</string>
+    <string name="str_home_listitem_result_notready">Results: Not Ready</string>
+    <string name="str_home_listitem_view_report"><u>View Report</u></string>
+    <string name="str_home_header_mrn">MRN: </string>
 </resources>

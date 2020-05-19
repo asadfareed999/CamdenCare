@@ -10,3 +10,7 @@ const val SDF_CLIENTEND = "d MMMM yyyy"
 
 /** Dalay **/
 const val DELAY_SPLASH = 2_000L
+
+/** Home Fragment **/
+const val ORDER_STATUS_VERIFIED = "verified"
+const val ORDER_STATUS_DELIVERED = "delivered"

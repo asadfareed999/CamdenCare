@@ -2,7 +2,6 @@ package com.camdencare.app
 
 import android.app.DownloadManager
 import android.content.Context
-import android.content.Context.DOWNLOAD_SERVICE
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -12,7 +11,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -31,7 +29,7 @@ import java.io.File
 class HomeFragment() : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: TestAdapter
+    private lateinit var adapter: OrdersAdapter
     private lateinit var textViewLogout: TextView
     private lateinit var textViewName: TextView
     private lateinit var textViewAge: TextView
@@ -59,7 +57,7 @@ class HomeFragment() : Fragment() {
                 val ordersList: List<Orders> = response!!.orders
                 recyclerView.layoutManager =
                     LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-                adapter = TestAdapter(this@HomeFragment, ordersList)
+                adapter = OrdersAdapter(this@HomeFragment, ordersList)
                 recyclerView.adapter = adapter
                 adapter.notifyDataSetChanged()
             }
@@ -92,7 +90,7 @@ class HomeFragment() : Fragment() {
         val camdenCarePreferences = CamdenCarePreferences(view.context)
         textViewName.text = camdenCarePreferences.getName()
         textViewAge.text = camdenCarePreferences.getAge()
-        val textMRN = view.context.getString(R.string.Str_mrn) + camdenCarePreferences.getMrn()
+        val textMRN = view.context.getString(R.string.str_home_header_mrn) + camdenCarePreferences.getMrn()
         textViewMrn.text = textMRN
     }
 
