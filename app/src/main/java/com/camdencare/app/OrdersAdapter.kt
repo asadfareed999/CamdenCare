@@ -55,12 +55,11 @@ class OrdersAdapter(private val homeFragment: HomeFragment, private val ordersLi
                 )
             )
             textViewDate.text = date
-            textViewTest.text = testList.get(position).test
-            val statusString = testList.get(position).status
+            textViewTest.text = order.test
+            val statusString = order.status
             if (statusString.equals(ORDER_STATUS_VERIFIED, true)
                 || statusString.equals(ORDER_STATUS_DELIVERED, true)
             ) {
-                //toggleBtnViewVisibility(visible = true)
                 val status =
                     homeFragment.getString(R.string.str_home_listitem_result_ready)
                 textViewStatus.text = status
@@ -68,7 +67,7 @@ class OrdersAdapter(private val homeFragment: HomeFragment, private val ordersLi
                 textViewReport.setOnClickListener(this)
             } else {
                 val status =
-                    itemView.context.getString(R.string.str_home_listitem_result_notready)
+                    homeFragment.getString(R.string.str_home_listitem_result_notready)
                 textViewStatus.text = status
                 textViewReport.setOnClickListener(null)
                 textViewReport.visibility = View.INVISIBLE
