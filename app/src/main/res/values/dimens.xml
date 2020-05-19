@@ -38,7 +38,9 @@
     <dimen name="dimen_home_table_padding">@dimen/_8sdp</dimen>
     <dimen name="dimen_home_row_text_padding">@dimen/_5sdp</dimen>
     <dimen name="dimen_home_footer_height">@dimen/_40sdp</dimen>
+    <dimen name="dimen_home_list_top">@dimen/_8sdp</dimen>
     // test item
     <dimen name="dimen_item_row_text_padding">@dimen/_2sdp</dimen>
     <dimen name="dimen_item_row_text">@dimen/_12ssp</dimen>
+    <dimen name="dimen_item_row_bottom">@dimen/_16sdp</dimen>
 </resources>

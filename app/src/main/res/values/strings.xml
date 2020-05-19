@@ -13,10 +13,10 @@
     <string name="str_logout">Logout</string>
     <string name="str__23_yrs">23 yrs</string>
     <string name="str_home_header_id">Mrn: 3456–3432-1234</string>
-    <string name="str_home_list_item_date">Date: %s</string>
+    <string name="str_home_list_item_date">19 May 2020</string>
     <string name="str_home_listitem_test">Lipid profile</string>
-    <string name="str_home_listitem_result_ready">Results: Ready</string>
-    <string name="str_home_listitem_result_notready">Results: Not Ready</string>
+    <string name="str_home_listitem_result_ready">Report: Ready</string>
+    <string name="str_home_listitem_result_notready">Report: Not Ready</string>
     <string name="str_home_listitem_view_report"><u>View Report</u></string>
     <string name="str_home_header_mrn">MRN: </string>
 </resources>

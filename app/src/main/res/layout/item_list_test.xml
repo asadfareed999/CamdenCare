@@ -6,7 +6,7 @@
     android:id="@+id/businessDayHour"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/dimen_item_row_bottom"
     android:background="@color/colorCardview">
 
         <TextView

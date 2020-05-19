@@ -47,12 +47,8 @@ class OrdersAdapter(private val homeFragment: HomeFragment, private val ordersLi
         ) {
             val order = ordersList[position]
 
-            val date = String.format(
-                homeFragment.getString(
-                    R.string.str_home_list_item_date,
-                    Utils.parseDate(order.created_at)
-                )
-            )
+            val date = Utils.parseDate(order.created_at)
+
             textViewDate.text = date
             textViewTest.text = order.test
             val statusString = order.status
@@ -71,19 +67,11 @@ class OrdersAdapter(private val homeFragment: HomeFragment, private val ordersLi
                 textViewReport.setOnClickListener(null)
                 textViewReport.visibility = View.INVISIBLE
 
-
             }
-            /* if (position==0 || position==2){
-                 val status=itemView.context.getString(R.string.Str_results)+" Ready"
-                 textViewStatus.text=status
-                 textViewReport.visibility=View.VISIBLE
-                 textViewReport.setOnClickListener(this)
-             }*/
         }
 
         override fun onClick(v: View?) {
             homeFragment.viewReport(ordersList[adapterPosition].order_id)
         }
-
     }
 }
