@@ -10,9 +10,9 @@
         android:id="@+id/img_camdencare_login"
         android:layout_width="@dimen/dimen_login_image_width"
         android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="h,0.66"
         android:layout_marginTop="@dimen/dimen_login_image_top"
         android:contentDescription="@string/str_camden_care_logo"
+        app:layout_constraintDimensionRatio="h,0.66"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,15 +20,16 @@
 
     <TextView
         android:id="@+id/tv_app_name"
+        style="@style/TextViewRobotoBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_login_textview_top"
         android:text="@string/app_name"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/dimen_login_textview_size"
         android:textStyle="bold"
-        android:layout_marginTop="@dimen/dimen_login_textview_top"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_camdencare_login" />
 
 
