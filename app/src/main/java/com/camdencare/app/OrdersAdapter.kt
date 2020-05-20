@@ -71,7 +71,7 @@ class OrdersAdapter(private val homeFragment: HomeFragment, private val ordersLi
         }
 
         override fun onClick(v: View?) {
-            homeFragment.viewReport(ordersList[adapterPosition].order_id)
+            homeFragment.viewReport(ordersList[adapterPosition].id)
         }
     }
 }
