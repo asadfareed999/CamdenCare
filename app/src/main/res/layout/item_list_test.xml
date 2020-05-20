@@ -28,7 +28,6 @@
             android:maxLines="2"
             android:textColor="@color/colorDarkBlue"
             style="@style/TextViewRobotoRegular"
-            android:layout_marginEnd="@dimen/_40sdp"
             app:layout_constraintEnd_toStartOf="@id/tv_list_view_report"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_list_date" />
