@@ -13,6 +13,7 @@ class CamdenCarePreferences(private val context: Context) :
         const val PREF_KEY_MRN = "mrn_key"
         const val PREF_KEY_NAME = "name_key"
         //todo:define other keys
+        const val PREF_KEY_AGE = "age_key"
     }
 
     fun isLogin(): Boolean {
@@ -29,19 +30,19 @@ class CamdenCarePreferences(private val context: Context) :
     }
 
     fun saveAge(age: String) {
-        putString("age_key", age)
+        putString(PREF_KEY_AGE, age)
     }
 
     fun getMrn(): String {
-        return getString("mrn_key", "")!!
+        return getString(PREF_KEY_MRN, "")!!
     }
 
     fun getName(): String {
-        return getString("name_key", "")!!
+        return getString(PREF_KEY_NAME, "")!!
     }
 
     fun getAge(): String {
-        return getString("age_key", "")!!
+        return getString(PREF_KEY_AGE, "")!!
     }
 
     fun logout() {

@@ -49,16 +49,18 @@ class LoginFragment() : Fragment() {
         //todo:define in string res
         if (mrn.isEmpty()){
             inputLayoutMRN.isErrorEnabled=true
-            inputLayoutMRN.error="Enter a valid MRN"
+            inputLayoutMRN.error=this.getString(R.string.str_hint_valid_mrn)
         }else if (number.isEmpty()){
             inputLayoutNumber.isErrorEnabled=true
             inputLayoutMRN.isErrorEnabled=false
-            inputLayoutNumber.error="Enter a valid Number"
+            inputLayoutNumber.error=this.getString(R.string.str_hint_valid_number)
         } else {
             inputLayoutNumber.isErrorEnabled=false
+            inputLayoutMRN.isErrorEnabled=false
             progressBar.visibility=View.VISIBLE
             progressBar.isIndeterminate=true
             //todo:disable button when api is calling to avoid multiple api calls due to multiple taps. enable button in api callback
+            enterButton.isEnabled=false
             val call = apiEndpointClient.login(mrn, number)
             BaseWebservices.executeApi(call, loginApiListener)
         }
@@ -70,25 +72,28 @@ class LoginFragment() : Fragment() {
         loginApiListener = object : OnResponseListener<ResponseLogin> {
             override fun onSuccess(response: ResponseLogin?) {
                 progressBar.visibility=View.GONE
+                enterButton.isEnabled=true
                 //todo:fix variable naming convention
-                val MRN:String=response!!.mrn
-                val FullName:String=response.fullName
-                val Age:String=response.age
+                val stringMRN:String=response!!.mrn
+                val stringFullName:String=response.fullName
+                val stringAge:String=response.age
                 val camdenCarePreferences= CamdenCarePreferences(view.context)
-                camdenCarePreferences.saveMRN(MRN)
-                camdenCarePreferences.saveName(FullName)
-                camdenCarePreferences.saveAge(Age)
+                camdenCarePreferences.saveMRN(stringMRN)
+                camdenCarePreferences.saveName(stringFullName)
+                camdenCarePreferences.saveAge(stringAge)
                 val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
                 view.findNavController().navigate(action)
             }
 
             override fun onFailure(t: Throwable) {
                 progressBar.visibility=View.GONE
+                enterButton.isEnabled=true
                 Snackbar.make(view, t.message.toString(), Snackbar.LENGTH_LONG).show()
             }
 
             override fun onCancel() {
                 progressBar.visibility=View.GONE
+                enterButton.isEnabled=true
                 Snackbar.make(view, "Login Cancelled", Snackbar.LENGTH_LONG).show()
             }
 

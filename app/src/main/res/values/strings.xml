@@ -18,5 +18,9 @@
     <string name="str_home_listitem_result_ready">Report: Ready</string>
     <string name="str_home_listitem_result_notready">Report: Not Ready</string>
     <string name="str_home_listitem_view_report"><u>View Report</u></string>
-    <string name="str_home_header_mrn">MRN: </string>
+    <string name="str_home_header_mrn">MRN:  %1$s</string>
+    <string name="str_hint_valid_mrn">Enter a valid MRN</string>
+    <string name="str_hint_valid_number">Enter a valid Number</string>
+
+
 </resources>
