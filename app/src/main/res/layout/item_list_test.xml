@@ -39,7 +39,6 @@
             android:text="@string/str_home_listitem_result_ready"
             android:textColor="@color/colorTextBlack"
             style="@style/TextViewRobotoRegular"
-            android:layout_marginEnd="@dimen/_40sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_list_test"
             app:layout_constraintEnd_toStartOf="@id/tv_list_view_report"/>
