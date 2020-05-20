@@ -12,7 +12,6 @@ class CamdenCarePreferences(private val context: Context) :
 
         const val PREF_KEY_MRN = "mrn_key"
         const val PREF_KEY_NAME = "name_key"
-        //todo:define other keys
         const val PREF_KEY_AGE = "age_key"
     }
 
