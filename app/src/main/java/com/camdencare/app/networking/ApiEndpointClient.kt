@@ -16,9 +16,8 @@ interface ApiEndpointClient {
         const val QUERY_MRN = "mrn"
         const val QUERY_PHONE1 = "phone1"
         const val QUERY_PATIENT_ID = "patient_id"
-        const val LAB_REPORT = "http://testbe.ranecs.com/api/v4/orders/online_lab_order_report.pdf?id=%d"
-
-
+        const val LAB_REPORT =
+            "http://testbe.ranecs.com/api/v4/orders/online_lab_order_report.pdf?id=%d"
     }
 
     @GET(LOGIN)

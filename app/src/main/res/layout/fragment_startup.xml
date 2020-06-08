@@ -34,7 +34,7 @@
             android:layout_height="@dimen/dimen_startup_logo_height"
             android:layout_gravity="center"
             android:contentDescription="@string/str_camden_care_logo"
-            app:srcCompat="@drawable/logo_app_verti" />
+            app:srcCompat="@drawable/img_camdencare_horiz" />
 
         <Button
             android:id="@+id/btn_login"
@@ -46,6 +46,30 @@
             android:text="@string/str_login"
             android:textColor="@color/colorButtonText" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivLogoUol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_default"
+        android:background="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_startup"
+        app:srcCompat="@drawable/logo_splash" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextViewRobotoBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_startup_logo_text_top"
+        android:text="@string/str_uol"
+        android:textColor="@color/colorTextPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogoUol" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

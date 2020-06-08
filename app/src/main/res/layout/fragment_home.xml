@@ -27,13 +27,15 @@
         <TextView
             android:id="@+id/tv_camden_care"
             style="@style/TextViewRobotoBold"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
+            android:layout_marginStart="@dimen/dimen_home_name_start"
+            android:layout_marginEnd="@dimen/dimen_home_name_start"
+            android:gravity="center"
+            android:text="@string/str_uol"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,53 +45,39 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_home_name_start"
-            android:layout_marginTop="@dimen/dimen_home_name_top"
+            android:layout_marginTop="@dimen/dimen_default"
             android:layout_marginEnd="@dimen/dimen_home_name_end"
             android:ellipsize="end"
             android:maxLines="2"
             android:text="@string/str_name"
             android:textColor="@color/colorWhite"
-            app:layout_constraintEnd_toStartOf="@id/iv_profile"
-            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_camden_care" />
+            app:layout_constraintTop_toBottomOf="@id/tvHomeUolContact"/>
 
         <TextView
-            android:id="@+id/tv_age"
+            android:id="@+id/tvPatient"
             style="@style/TextViewRobotoRegular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_home_name_start"
-            android:maxLength="10"
             android:text="@string/str__23_yrs"
             android:textColor="@color/colorWhite"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_name" />
 
         <TextView
-            android:id="@+id/tv_id"
+            android:id="@+id/tvHomeUolContact"
             style="@style/TextViewRobotoRegular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_home_name_start"
-            android:maxLength="20"
-            android:text="@string/str_home_header_id"
-            android:textColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/dimen_home_top"
+            android:gravity="center"
+            android:text="@string/str_home_uol_contact"
+            android:textColor="@color/colorTextWhite"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_age" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_camden_care" />
 
-        <com.mikhaellopez.circularimageview.CircularImageView
-            android:id="@+id/iv_profile"
-            android:layout_width="@dimen/dimen_home_image"
-            android:layout_height="@dimen/dimen_home_image"
-            android:layout_gravity="center"
-            android:layout_marginEnd="@dimen/dimen_home_name_start"
-            android:src="@drawable/ic_user_profile"
-            app:civ_border_color="@color/colorCivBorder"
-            app:civ_border_width="4dp"
-            app:civ_shadow="false"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_id"
-            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -171,6 +159,35 @@
         app:layout_constraintBottom_toBottomOf="@id/view_bottom"
         app:layout_constraintEnd_toEndOf="@id/view_bottom"
         app:layout_constraintTop_toTopOf="@id/view_bottom" />
+
+    <TextView
+        android:id="@+id/tvLblPoweredBy"
+        style="@style/TextViewRoboto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_home_name_start"
+        android:layout_marginTop="@dimen/dimen_home_name_end"
+        android:text="@string/str_home_footer_lbl_powered_by"
+        android:textColor="@color/colorTextWhite"
+        app:layout_constraintStart_toStartOf="@+id/view_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/swipeRefresh"
+        android:textSize="@dimen/dimen_home_footer_poweredby_text"/>
+
+    <TextView
+        android:id="@+id/tvPoweredBy"
+        style="@style/TextViewRoboto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="2"
+        android:text="@string/str_home_footer_powered_by"
+        android:textColor="@color/colorTextWhite"
+        app:layout_constraintEnd_toStartOf="@+id/tv_logout"
+        app:layout_constraintStart_toEndOf="@+id/tvLblPoweredBy"
+        app:layout_constraintTop_toTopOf="@id/tvLblPoweredBy"
+        android:textSize="@dimen/dimen_home_footer_poweredby_text"
+        android:layout_marginStart="@dimen/dimen_home_name_end"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,12 +1,9 @@
 package com.camdencare.app
 
-import android.app.DownloadManager
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
-import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,9 +19,12 @@ import com.camdencare.app.networking.OnResponseListener
 import com.camdencare.app.networking.responsemodels.Orders
 import com.camdencare.app.networking.responsemodels.ResponseOrders
 import com.camdencare.app.prefrences.CamdenCarePreferences
+import com.camdencare.app.utilities.URL_CAMDENHEALTHSYS
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
-import java.io.File
+import kotlinx.android.synthetic.main.fragment_home.view.tvPoweredBy
+import org.w3c.dom.Text
 
 
 class HomeFragment() : Fragment() {
@@ -34,7 +34,7 @@ class HomeFragment() : Fragment() {
     private lateinit var adapter: OrdersAdapter
     private lateinit var textViewLogout: TextView
     private lateinit var textViewName: TextView
-    private lateinit var textViewAge: TextView
+    private lateinit var textViewPatient: TextView
     private lateinit var textViewMrn: TextView
     private val apiEndpointClient = BaseWebservices.getApiEndpointClient()
     private lateinit var orderApiListener: OnResponseListener<ResponseOrders>
@@ -101,12 +101,13 @@ class HomeFragment() : Fragment() {
     private fun setProfileInfo(view: View) {
         val camdenCarePreferences = CamdenCarePreferences(view.context)
         textViewName.text = camdenCarePreferences.getName()
-        textViewAge.text = camdenCarePreferences.getAge()
-        val textMRN = String.format(
-            this@HomeFragment.getString(R.string.str_home_header_mrn),
-            camdenCarePreferences.getMrn()
+        val age = camdenCarePreferences.getAge()
+        val mrn = camdenCarePreferences.getMrn()
+        val textPatient = String.format(
+            this@HomeFragment.getString(R.string.str_home_header_patient),
+            age, mrn
         )
-        textViewMrn.text = textMRN
+        textViewPatient.text = textPatient
     }
 
     private fun initViews(view: View) {
@@ -114,8 +115,15 @@ class HomeFragment() : Fragment() {
         recyclerView = view.fragmentHomeRecyclerView
         textViewLogout = view.findViewById(R.id.tv_logout)
         textViewName = view.findViewById(R.id.tv_name)
-        textViewAge = view.findViewById(R.id.tv_age)
-        textViewMrn = view.findViewById(R.id.tv_id)
+        textViewPatient = view.findViewById(R.id.tvPatient)
+        val tvPoweredBy = view.findViewById<TextView>(R.id.tvPoweredBy)
+        tvPoweredBy.setOnClickListener {
+            Intent().apply {
+                action = Intent.ACTION_VIEW
+                data = Uri.parse(URL_CAMDENHEALTHSYS)
+                startActivity(this)
+            }
+        }
     }
 
     fun viewReport(orderId: Int) {

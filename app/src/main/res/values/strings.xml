@@ -11,16 +11,19 @@
     <string name="str_date">Date</string>
     <string name="str_summary">Summary</string>
     <string name="str_logout">Logout</string>
-    <string name="str__23_yrs">23 yrs</string>
+    <string name="str__23_yrs">23 yrs, Mrn: 3456–3432-1234</string>
+    <string name="str_uol">The University Of Lahore Teaching Hospital</string>
+    <string name="str_home_uol_contact">1-Km Defense Road\nNear Bhuptian Chowk, Lahore\nPh:(042) 32560865</string>
     <string name="str_home_header_id">Mrn: 3456–3432-1234</string>
     <string name="str_home_list_item_date">19 May 2020</string>
     <string name="str_home_listitem_test">Lipid profile</string>
     <string name="str_home_listitem_result_ready">Report: Ready</string>
     <string name="str_home_listitem_result_notready">Report: Not Ready</string>
     <string name="str_home_listitem_view_report"><u>View Report</u></string>
-    <string name="str_home_header_mrn">MRN:  %1$s</string>
+    <string name="str_home_header_patient">%s, MRN: %s</string>
+    <string name="str_home_footer_lbl_powered_by">Powered By:</string>
+    <string name="str_home_footer_powered_by">Camden Health System\nwwww.camdenhealthsys.com</string>
     <string name="str_hint_valid_mrn">Enter a valid MRN</string>
     <string name="str_hint_valid_number">Enter a valid Number</string>
-
 
 </resources>
