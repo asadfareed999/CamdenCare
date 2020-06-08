@@ -102,7 +102,10 @@ class HomeFragment() : Fragment() {
         val camdenCarePreferences = CamdenCarePreferences(view.context)
         textViewName.text = camdenCarePreferences.getName()
         textViewAge.text = camdenCarePreferences.getAge()
-        val textMRN = String.format(this@HomeFragment.getString(R.string.str_home_header_mrn),camdenCarePreferences.getMrn())
+        val textMRN = String.format(
+            this@HomeFragment.getString(R.string.str_home_header_mrn),
+            camdenCarePreferences.getMrn()
+        )
         textViewMrn.text = textMRN
     }
 
@@ -127,28 +130,7 @@ class HomeFragment() : Fragment() {
         val notEmpty = queryIntentActivities.isNotEmpty()
         if (notEmpty) {
             startActivity(intent)
-        } else {
-//            beginDownload(downloadUrl)
         }
 
-    }
-
-    private fun beginDownload(downloadUrl: String) {
-        val file = File(requireActivity().getExternalFilesDir(null), "Dummy")
-        /*
-        Create a DownloadManager.Request with all the information necessary to start the download
-         */
-        val request =
-            DownloadManager.Request(Uri.parse("http://speedtest.ftp.otenet.gr/files/test10Mb.db"))
-                .setTitle("Dummy File") // Title of the Download Notification
-                .setDescription("Downloading") // Description of the Download Notification
-                .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE) // Visibility of the download Notification
-                .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "Dummy")
-                .setAllowedOverMetered(true) // Set if download is allowed on Mobile network
-                .setAllowedOverRoaming(true) // Set if download is allowed on roaming network
-        val downloadManager =
-            requireContext().getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
-        val downloadID =
-            downloadManager.enqueue(request) // enqueue puts the download request in the queue.
     }
 }
