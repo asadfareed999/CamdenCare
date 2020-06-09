@@ -156,7 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimen_home_name_start"
-        android:layout_marginTop="@dimen/dimen_home_name_end"
+        android:layout_marginTop="@dimen/dimen_default"
         android:text="@string/str_home_footer_lbl_powered_by"
         android:textColor="@color/colorTextWhite"
         android:textSize="@dimen/dimen_home_footer_poweredby_text"
