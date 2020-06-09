@@ -18,7 +18,7 @@
         android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/dimen_home_top"
+        android:paddingTop="@dimen/dimen_default"
         android:paddingBottom="@dimen/dimen_home_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +35,7 @@
             android:text="@string/str_uol"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
+            android:textSize="@dimen/dimen_home_row_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +53,7 @@
             android:text="@string/str_name"
             android:textColor="@color/colorWhite"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvHomeUolContact"/>
+            app:layout_constraintTop_toBottomOf="@id/tvHomeUolContact" />
 
         <TextView
             android:id="@+id/tvPatient"
@@ -74,6 +75,7 @@
             android:gravity="center"
             android:text="@string/str_home_uol_contact"
             android:textColor="@color/colorTextWhite"
+            android:textSize="@dimen/dimen_home_footer_poweredby_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_camden_care" />
@@ -82,8 +84,9 @@
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefresh"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="@dimen/dimen_home_card_margin"
         app:layout_constraintBottom_toTopOf="@id/view_bottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,49 +95,36 @@
         <LinearLayout
             android:id="@+id/linear_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dimen_home_card_margin"
-                android:background="@color/colorCardview"
-                card_view:cardElevation="@dimen/dimen_home_cardview_elevation">
+                android:elevation="@dimen/dimen_home_cardview_elevation">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/tv_summary"
+                    style="@style/TextViewRobotoBold"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/colorCardview"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tv_summary"
-                        style="@style/TextViewRobotoBold"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dimen_home_table_padding"
-                        android:layout_marginTop="@dimen/dimen_home_table_padding"
-                        android:text="@string/str_summary"
-                        android:textColor="@color/colorDarkBlue"
-                        android:textStyle="bold" />
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/fragmentHomeRecyclerView"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dimen_home_list_top"
-                        android:background="@color/colorCardview"
-                        android:paddingStart="@dimen/dimen_home_table_padding"
-                        android:paddingEnd="@dimen/dimen_home_table_padding"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                        tools:itemCount="4"
-                        tools:listitem="@layout/item_list_test" />
-
-                </LinearLayout>
-
+                    android:padding="@dimen/dimen_home_card_margin"
+                    android:text="@string/str_summary"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragmentHomeRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_home_list_top"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_list_test" />
+
         </LinearLayout>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
@@ -169,25 +159,25 @@
         android:layout_marginTop="@dimen/dimen_home_name_end"
         android:text="@string/str_home_footer_lbl_powered_by"
         android:textColor="@color/colorTextWhite"
+        android:textSize="@dimen/dimen_home_footer_poweredby_text"
         app:layout_constraintStart_toStartOf="@+id/view_bottom"
-        app:layout_constraintTop_toBottomOf="@+id/swipeRefresh"
-        android:textSize="@dimen/dimen_home_footer_poweredby_text"/>
+        app:layout_constraintTop_toBottomOf="@+id/swipeRefresh" />
 
     <TextView
         android:id="@+id/tvPoweredBy"
         style="@style/TextViewRoboto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_home_name_end"
         android:ellipsize="end"
         android:gravity="start"
         android:maxLines="2"
         android:text="@string/str_home_footer_powered_by"
         android:textColor="@color/colorTextWhite"
+        android:textSize="@dimen/dimen_home_footer_poweredby_text"
         app:layout_constraintEnd_toStartOf="@+id/tv_logout"
         app:layout_constraintStart_toEndOf="@+id/tvLblPoweredBy"
-        app:layout_constraintTop_toTopOf="@id/tvLblPoweredBy"
-        android:textSize="@dimen/dimen_home_footer_poweredby_text"
-        android:layout_marginStart="@dimen/dimen_home_name_end"/>
+        app:layout_constraintTop_toTopOf="@id/tvLblPoweredBy" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

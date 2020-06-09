@@ -9,7 +9,7 @@
     <string name="str_status">Status</string>
     <string name="str_test">Test</string>
     <string name="str_date">Date</string>
-    <string name="str_summary">Summary</string>
+    <string name="str_summary">LAB</string>
     <string name="str_logout">Logout</string>
     <string name="str__23_yrs">23 yrs, Mrn: 3456–3432-1234</string>
     <string name="str_uol">The University Of Lahore Teaching Hospital</string>
@@ -21,7 +21,7 @@
     <string name="str_home_listitem_result_notready">Report: Not Ready</string>
     <string name="str_home_listitem_view_report"><u>View Report</u></string>
     <string name="str_home_header_patient">%s, MRN: %s</string>
-    <string name="str_home_footer_lbl_powered_by">Powered By:</string>
+    <string name="str_home_footer_lbl_powered_by">Powered by:</string>
     <string name="str_home_footer_powered_by">Camden Health System\nwwww.camdenhealthsys.com</string>
     <string name="str_hint_valid_mrn">Enter a valid MRN</string>
     <string name="str_hint_valid_number">Enter a valid Number</string>

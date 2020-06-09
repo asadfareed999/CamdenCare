@@ -1,63 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/businessDayHour"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/dimen_item_row_bottom"
-    android:background="@color/colorCardview">
+    android:layout_marginBottom="@dimen/dimen_home_card_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/businessDayHour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCardview"
+        android:padding="@dimen/dimen_home_table_padding">
 
         <TextView
             android:id="@+id/tv_list_date"
+            style="@style/TextViewRoboto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_40sdp"
             android:text="@string/str_home_list_item_date"
             android:textColor="@color/colorTextBlack"
-            style="@style/TextViewRoboto"
-            android:layout_marginEnd="@dimen/_40sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_list_test"
+            style="@style/TextViewRobotoRegular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/str_home_listitem_test"
             android:maxLines="2"
+            android:text="@string/str_home_listitem_test"
             android:textColor="@color/colorDarkBlue"
-            style="@style/TextViewRobotoRegular"
             app:layout_constraintEnd_toStartOf="@id/tv_list_view_report"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_list_date" />
 
         <TextView
             android:id="@+id/tv_list_status"
+            style="@style/TextViewRobotoRegular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/str_home_listitem_result_ready"
             android:textColor="@color/colorTextBlack"
-            style="@style/TextViewRobotoRegular"
+            app:layout_constraintEnd_toStartOf="@id/tv_list_view_report"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_list_test"
-            app:layout_constraintEnd_toStartOf="@id/tv_list_view_report"/>
+            app:layout_constraintTop_toBottomOf="@id/tv_list_test" />
 
-    <TextView
-        android:id="@+id/tv_list_view_report"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/dimen_item_row_text_padding"
-        android:visibility="invisible"
-        android:text="@string/str_home_listitem_view_report"
-        android:textColor="@color/colorDarkBlue"
-        style="@style/TextViewRobotoRegular"
-        android:layout_marginStart="@dimen/_8sdp"
-        android:layout_marginEnd="@dimen/_4sdp"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/tv_list_view_report"
+            style="@style/TextViewRobotoRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:padding="@dimen/dimen_item_row_text_padding"
+            android:text="@string/str_home_listitem_view_report"
+            android:textColor="@color/colorDarkBlue"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
