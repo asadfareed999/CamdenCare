@@ -32,33 +32,33 @@ class LoginFragment() : Fragment() {
     ): View {
         val view: View = inflater.inflate(R.layout.fragment_login, container, false)
         enterButton = view.findViewById(R.id.btn_enter)
-        progressBar= requireActivity().findViewById(R.id.loadingBar)
-        inputLayoutMRN=view.findViewById(R.id.textfield_mrn)
-        inputLayoutNumber=view.findViewById(R.id.textfield_mobile_number)
+        progressBar = requireActivity().findViewById(R.id.loadingBar)
+        inputLayoutMRN = view.findViewById(R.id.textfield_mrn)
+        inputLayoutNumber = view.findViewById(R.id.textfield_mobile_number)
         enterButton.setOnClickListener {
             val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
             // view.findNavController().navigate(action) }
             exeLoginApi()
         }
-            return view
+        return view
     }
 
     private fun exeLoginApi() {
-        val mrn:String=inputLayoutMRN.editText!!.text.toString()
-        val number:String=inputLayoutNumber.editText!!.text.toString()
-        if (mrn.isEmpty()){
-            inputLayoutMRN.isErrorEnabled=true
-            inputLayoutMRN.error=this.getString(R.string.str_hint_valid_mrn)
-        }else if (number.isEmpty()){
-            inputLayoutNumber.isErrorEnabled=true
-            inputLayoutMRN.isErrorEnabled=false
-            inputLayoutNumber.error=this.getString(R.string.str_hint_valid_number)
+        val mrn: String = inputLayoutMRN.editText!!.text.toString()
+        val number: String = inputLayoutNumber.editText!!.text.toString()
+        if (mrn.isEmpty()) {
+            inputLayoutMRN.isErrorEnabled = true
+            inputLayoutMRN.error = this.getString(R.string.str_hint_valid_mrn)
+        } else if (number.isEmpty()) {
+            inputLayoutNumber.isErrorEnabled = true
+            inputLayoutMRN.isErrorEnabled = false
+            inputLayoutNumber.error = this.getString(R.string.str_hint_valid_number)
         } else {
-            inputLayoutNumber.isErrorEnabled=false
-            inputLayoutMRN.isErrorEnabled=false
-            progressBar.visibility=View.VISIBLE
-            progressBar.isIndeterminate=true
-            enterButton.isEnabled=false
+            inputLayoutNumber.isErrorEnabled = false
+            inputLayoutMRN.isErrorEnabled = false
+            progressBar.visibility = View.VISIBLE
+            progressBar.isIndeterminate = true
+            enterButton.isEnabled = false
             val call = apiEndpointClient.login(mrn, number)
             BaseWebservices.executeApi(call, loginApiListener)
         }
@@ -66,31 +66,33 @@ class LoginFragment() : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         loginApiListener = object : OnResponseListener<ResponseLogin> {
             override fun onSuccess(response: ResponseLogin?) {
-                progressBar.visibility=View.GONE
-                enterButton.isEnabled=true
-                val stringMRN:String=response!!.mrn
-                val stringFullName:String=response.fullName
-                val stringAge:String=response.age
-                val camdenCarePreferences= CamdenCarePreferences(view.context)
+                progressBar.visibility = View.GONE
+                enterButton.isEnabled = true
+                val stringMRN: String = response!!.mrn
+                val stringFullName: String = response.fullName
+                val stringAge: String = response.age
+                val gender: String = response.gender
+                val camdenCarePreferences = CamdenCarePreferences(view.context)
                 camdenCarePreferences.saveMRN(stringMRN)
                 camdenCarePreferences.saveName(stringFullName)
                 camdenCarePreferences.saveAge(stringAge)
+                camdenCarePreferences.saveGender(gender)
                 val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
                 view.findNavController().navigate(action)
             }
 
             override fun onFailure(t: Throwable) {
-                progressBar.visibility=View.GONE
-                enterButton.isEnabled=true
+                progressBar.visibility = View.GONE
+                enterButton.isEnabled = true
                 Snackbar.make(view, t.message.toString(), Snackbar.LENGTH_LONG).show()
             }
 
             override fun onCancel() {
-                progressBar.visibility=View.GONE
-                enterButton.isEnabled=true
+                progressBar.visibility = View.GONE
+                enterButton.isEnabled = true
                 Snackbar.make(view, "Login Cancelled", Snackbar.LENGTH_LONG).show()
             }
 

@@ -21,13 +21,16 @@ import com.camdencare.app.networking.responsemodels.ResponseOrders
 import com.camdencare.app.prefrences.CamdenCarePreferences
 import com.camdencare.app.utilities.URL_CAMDENHEALTHSYS
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
-import kotlinx.android.synthetic.main.fragment_home.view.tvPoweredBy
-import org.w3c.dom.Text
 
 
 class HomeFragment() : Fragment() {
+
+    enum class EnumGender(val gender: String) {
+        male("M"),
+        female("F")
+
+    }
 
     private lateinit var swipeRefresh: SwipeRefreshLayout
     private lateinit var recyclerView: RecyclerView
@@ -103,9 +106,11 @@ class HomeFragment() : Fragment() {
         textViewName.text = camdenCarePreferences.getName()
         val age = camdenCarePreferences.getAge()
         val mrn = camdenCarePreferences.getMrn()
+        val gender = camdenCarePreferences.getGender()
+        val enumGender = EnumGender.valueOf(gender)
         val textPatient = String.format(
             this@HomeFragment.getString(R.string.str_home_header_patient),
-            age, mrn
+            age, enumGender.gender, mrn
         )
         textViewPatient.text = textPatient
     }

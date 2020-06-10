@@ -13,6 +13,7 @@ class CamdenCarePreferences(private val context: Context) :
         const val PREF_KEY_MRN = "mrn_key"
         const val PREF_KEY_NAME = "name_key"
         const val PREF_KEY_AGE = "age_key"
+        const val PREF_GENDER = "pref_gender"
     }
 
     fun isLogin(): Boolean {
@@ -32,6 +33,10 @@ class CamdenCarePreferences(private val context: Context) :
         putString(PREF_KEY_AGE, age)
     }
 
+    fun saveGender(gender: String) {
+        putString(PREF_GENDER, gender)
+    }
+
     fun getMrn(): String {
         return getString(PREF_KEY_MRN, "")!!
     }
@@ -42,6 +47,10 @@ class CamdenCarePreferences(private val context: Context) :
 
     fun getAge(): String {
         return getString(PREF_KEY_AGE, "")!!
+    }
+
+    fun getGender(): String {
+        return getString(PREF_GENDER, "")!!
     }
 
     fun logout() {
