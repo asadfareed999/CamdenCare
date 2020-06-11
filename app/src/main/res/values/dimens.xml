@@ -5,6 +5,7 @@
     // startup
     <dimen name="dimen_startup_linearlayout_width">@dimen/_220sdp</dimen>
     <dimen name="dimen_startup_logo_text_top">@dimen/_8sdp</dimen>
+    <dimen name="dimen_startup_logo_top">@dimen/_40sdp</dimen>
     <dimen name="dimen_linearlayout_margin_bottom">@dimen/_20sdp</dimen>
     <!--  scale factor h  0.27-->
     <dimen name="dimen_startup_logo_width">@dimen/_220sdp</dimen>
