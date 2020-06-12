@@ -2,6 +2,6 @@
 <network-security-config xmlns:android="http://schemas.android.com/apk/res/android">
     <base-config cleartextTrafficPermitted="true" />
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">http://testbe.ranecs.com</domain>
+        <domain includeSubdomains="true">http://103.141.229.29</domain>
     </domain-config>
 </network-security-config>

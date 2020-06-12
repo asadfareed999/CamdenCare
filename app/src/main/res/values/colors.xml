@@ -17,6 +17,6 @@
     <color name="colorTextBlack">@color/colorBlack</color>
     <color name="colorTextPrimary">@color/colorPrimary</color>
     <color name="colorStartupLogoTint">@color/colorPrimary</color>
-    <color name="colorStartupBg">#EBECED</color>
+    <color name="colorStartupBg">#F0F4F3</color>
 
 </resources>

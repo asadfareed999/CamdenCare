@@ -28,8 +28,7 @@ class HomeFragment() : Fragment() {
 
     enum class EnumGender(val gender: String) {
         male("M"),
-        female("F")
-
+        female("F"),
     }
 
     private lateinit var swipeRefresh: SwipeRefreshLayout
@@ -106,12 +105,19 @@ class HomeFragment() : Fragment() {
         textViewName.text = camdenCarePreferences.getName()
         val age = camdenCarePreferences.getAge()
         val mrn = camdenCarePreferences.getMrn()
-        val gender = camdenCarePreferences.getGender()
-        val enumGender = EnumGender.valueOf(gender)
-        val textPatient = String.format(
-            this@HomeFragment.getString(R.string.str_home_header_patient),
-            age, enumGender.gender, mrn
-        )
+        val gender: String = camdenCarePreferences.getGender()
+        val textPatient = if (gender.isEmpty()) {
+            String.format(
+                this@HomeFragment.getString(R.string.str_home_header_patient),
+                age, mrn
+            )
+        } else {
+            val enumGender = EnumGender.valueOf(gender)
+            String.format(
+                this@HomeFragment.getString(R.string.str_home_header_patient_2),
+                age, enumGender.gender, mrn
+            )
+        }
         textViewPatient.text = textPatient
     }
 
