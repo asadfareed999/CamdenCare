@@ -36,8 +36,6 @@ class LoginFragment() : Fragment() {
         inputLayoutMRN = view.findViewById(R.id.textfield_mrn)
         inputLayoutNumber = view.findViewById(R.id.textfield_mobile_number)
         enterButton.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
-            // view.findNavController().navigate(action) }
             exeLoginApi()
         }
         return view

@@ -18,7 +18,8 @@ interface OnResponseListener<T> {
 
 object BaseWebservices {
 
-    private const val BASE_URL = "http://103.141.229.29/"       //also update host in BaseWebservices.kt
+//    private const val BASE_URL = "http://testbe.rences.com/"
+    private const val BASE_URL = "http://103.141.229.29/"       //also update host in networkconfig
 
     private var retrofit: Retrofit? = null
     private val okHttpClientBuilder = OkHttpClient.Builder()
